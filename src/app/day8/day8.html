@@ -1,0 +1,22 @@
+<p>day8 works!</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>COMPLETED</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(todo of mydata ;track todo.id)
+        {
+            <tr>
+                <td>{{todo.id}}</td>
+                <td>{{todo.title}}</td>
+                <td>{{todo.completed ? 'yes':'no'}}</td>
+                <td><button class="btn btn-danger" (click)="deleteTodo(todo.id)">delete</button></td>
+                <td><button class="btn btn-warning" (click)="editTodo(todo.id)">edit</button></td>
+            </tr>
+        }
+    </tbody>
+</table>

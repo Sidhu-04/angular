@@ -1,0 +1,51 @@
+<p>daytwo works!</p>
+
+
+<h3 style="background-color: blanchedalmond;">Inter polation</h3>
+<h1>{{msg}}</h1>
+<hr>
+<hr>
+<h3 style="background-color: bisque;">Property Binding</h3>
+<br>
+<input type="text" [value]="msg">
+<br>
+<input [type]="type" value="Sidhu">
+
+<hr>
+<hr>
+
+<h3 style="background-color: bisque;">Event Binding</h3>
+<input type="text" #frame>
+<button (click)="display(frame.value)">Click</button>
+
+
+<br>
+<br>
+<br>
+<hr>
+<hr>
+<div style="background-color: blue;">
+<h2>TWO WAY DATABINDING</h2>
+</div>
+<br>
+
+<h5 style="background-color: bisque;">mthd 1</h5>
+
+<h2>{{changetext}}</h2>
+
+<input type="text" value="changetext" (input)="changetext=$event.target.value">
+<br>
+<br>
+<h5 style="background-color: bisque;">mthd 2</h5>
+<br>
+<br>
+<h2>{{newtext}}</h2>
+<input type="text" [(ngModel)]="newtext" name="newtext">
+<br>
+<br>
+
+<input type="number" [(ngModel)]="num1" placeholder="Enter first number">
+
+<input type="number" [(ngModel)]="num2" placeholder="Enter second number">
+
+<input type="number" [value]="num1 + num2" placeholder="Result" readonly>

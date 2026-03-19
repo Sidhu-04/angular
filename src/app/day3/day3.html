@@ -1,0 +1,88 @@
+<p>day3 works!</p>
+<br>
+<br>
+<br>
+<h1>Control statments</h1>
+<h4>1. IF</h4>
+@if(time < 12)
+{
+    <p>GOOD MORNING</p>
+}
+@else if(time >= 12 && time < 17)
+{
+    <p>GOOD AFTERNOON</p>
+}
+@else
+{
+    <p>GOOD EVENING</p>
+}
+<br>
+<br>
+
+<br>
+<h2>2. For</h2>
+<br>
+<ol>
+    @for ( p of places ;track $index )
+    {
+        <li>{{p}}</li>
+    }
+</ol>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>index</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Grade</th>
+            <!-- <th>Even</th>
+            <th>Odd</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        @for ( s of students ; track s.id )
+        {
+            <tr>
+                <td>{{$index+1 }}</td>
+                <td>{{s.name }}</td>
+                <td>{{s.Age }}</td>
+                <td>{{s.Grade }}</td>
+                <!-- <td>{{s.e}}</td>
+                <td>{{s.o}}</td> -->
+            </tr>
+        }
+    </tbody>
+</table>
+<br>
+<br>
+<br>
+<h2>Switch</h2>
+
+@switch(day)
+{
+    @case('1'){
+        <p>Monday</p>
+    }
+    
+    @case('2'){
+        <p>Tuesday</p>
+    }
+    
+    @case('3'){
+        <p>Wendesday</p>
+    }
+    
+    @default{
+        <p>Invalid Day</p>
+    }
+    
+}
+<br>
+<br>
+<br>

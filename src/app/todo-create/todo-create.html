@@ -1,0 +1,15 @@
+<p>todo-create works!</p>
+
+
+<h1>TO DO CRAETE</h1>
+
+
+
+<form #myform="ngForm" (ngSubmit)="create(myform.value)">
+    <label for="">Enter Name</label>
+    <input type="text" name="title" ngModel #title=ngModel required
+    [class.err]="title.invalid && title.touched"><br>
+   
+
+    <input type="submit" value="SUBMIT" [disabled]="myform.invalid">
+</form>
